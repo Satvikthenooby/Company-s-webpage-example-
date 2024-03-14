@@ -1,0 +1,153 @@
+/* Imagine you are tasked with styling a responsive webpage for a company's online store. The webpage includes a header, navigation bar, main content area with product listings, and a footer. Your goal is to demonstrate your understanding of various CSS concepts. Please provide a detailed CSS code snippet that accomplishes the following tasks:
+
+Implement a responsive design that adjusts the layout and font sizes based on the device's screen size.
+Style the header with a background color, center the company logo, and add a navigation bar with horizontal navigation links.
+Apply a grid layout to the main content area to display product listings in a visually appealing way.
+Add hover effects to the navigation links and product listings for better user interactivity.
+Utilize flexbox to center align the footer content and give it a distinct background color. */
+
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Oswald:wght@300&family=Poppins&display=swap');
+
+body {
+    background-color: rgba(0, 213, 255, 0.455);
+    margin: 0;
+}
+
+header {
+    background-color: navy;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.header_text {
+
+    font-size: 50px;
+    /* font-family: 'Hedvig Letters Sans', sans-serif; */
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    color: peachpuff;
+
+}
+
+nav {
+    position: relative;
+    bottom: 25px;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: peachpuff;
+    height: 5%;
+    color: navy;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+
+
+}
+
+.web {
+    position: relative;
+    top: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: center;
+    margin-top: 100px;
+    /* Adjusted the margin for better spacing */
+
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    border: 2px solid white;
+    margin: 4px;
+    flex-direction: column;
+    /* height: 100%; */
+    background-color: white;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+
+
+
+
+
+
+}
+
+img {
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid black;
+    opacity: 100%;
+    animation: background3 1s ease-in-out infinite;
+}
+
+
+footer {
+    text-align: center;
+    margin: 34px auto;
+    background-color: peachpuff;
+    font-family: "poppins", "sans-serif";
+
+}
+
+.price {
+    text-decoration: underline;
+}
+
+.price:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+    
+    transition: transform 0.1s ease-in-out;
+}
+
+li:hover {
+    background-color: rgba(255, 127, 80, 0.44);
+   
+
+}
+
+@keyframes background3 {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        
+        filter: brightness(40%);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
